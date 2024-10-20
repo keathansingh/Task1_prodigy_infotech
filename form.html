@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #43413e;
+            background-image: url('Areal-View-Campus.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+        }
+        form {
+            background-color: rgba(199, 193, 193, 0.8); /* Added transparency for better readability */
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+            width: 500px;
+        }
+        h2 {
+            text-align: center;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"],
+        input[type="submit"],
+        input[type="button"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        input[type="button"] {
+            background-color: #555;
+            color: #fff;
+            cursor: pointer;
+        }
+        input[type="button"]:hover {
+            background-color: #333;
+        }
+    </style>
+    <script type="text/javascript">
+        function validateProfile() {
+          var Firstname = document.getElementById("Firstname").value;
+          var Lastname = document.getElementById("Lastname").value;
+          var Email = document.getElementById("Email").value;
+          var Applicationid = document.getElementById("Applicationid").value;
+          var Phone = document.getElementById("Phone").value;
+          var Dob = document.getElementById("Dob").value;
+          var Address = document.getElementById("Address").value;
+          var Department = document.getElementById("Department").value;
+
+          // First name validation: check if name contains only letters and spaces
+          for (var i = 0; i < Firstname.length; i++) {
+            if (!((Firstname[i] >= 'A' && Firstname[i] <= 'Z') || (Firstname[i] >= 'a' && Firstname[i] <= 'z') || Firstname[i] === ' ')) {
+              alert("First name can only contain letters and spaces.");
+              return false;
+            }
+          }
+
+          // Last name validation: check if name contains only letters and spaces
+          for (var i = 0; i < Lastname.length; i++) {
+            if (!((Lastname[i] >= 'A' && Lastname[i] <= 'Z') || (Lastname[i] >= 'a' && Lastname[i] <= 'z') || Lastname[i] === ' ')) {
+              alert("Last name can only contain letters and spaces.");
+              return false;
+            }
+          }
+
+          // Basic email validation: check if it contains "@" and "."
+          if (Email.indexOf('@') === -1 || Email.indexOf('.') === -1) {
+            alert("Please enter a valid email address.");
+            return false;
+          }
+
+          // Application ID validation: check if it contains only digits
+          for (var i = 0; i < Applicationid.length; i++) {
+         if (!(Applicationid[i] >= '0' && Applicationid[i] <= '9')) {
+          alert("Application ID should only contain digits.");
+          return false;
+         }
+          }
+
+          // Phone number validation: check if it is exactly 10 digits
+          if (Phone.length !== 10 || isNaN(Phone)) {
+            alert("Phone number should be exactly 10 digits.");
+            return false;
+          }
+
+          // Date of birth validation: check if it's not in the future
+          if (new Date(Dob) > new Date()) {
+            alert("Date of birth cannot be in the future.");
+            return false;
+          }
+
+          // Address validation: check if it's at least 5 characters long
+          if (Address.length < 5) {
+            alert("Address should be at least 5 characters long.");
+            return false;
+          }
+
+          // Department validation: ensure a selection is made
+          if (Department === "") {
+            alert("Please select a department.");
+            return false;
+          }
+
+          // If all validations pass, show success pop-up
+          alert("Successfully registered!");
+          return true;
+        }
+    </script>
+</head>
+<body>
+<form onsubmit="return validateProfile();">
+    <h2>Register</h2>
+    <label for="Firstname">First Name:</label>
+    <input type="text" id="Firstname" name="Firstname" required>
+
+    <label for="Lastname">Last Name:</label>
+    <input type="text" id="Lastname" name="Lastname" required>
+
+    <label for="Email">Email:</label>
+    <input type="email" id="Email" name="Email" required>
+
+    <label for="Applicationid">Application ID:</label>
+    <input type="text" id="Applicationid" name="Applicationid" required>
+
+    <label for="Phone">Phone Number:</label>
+    <input type="number" id="Phone" name="Phone" required>
+
+    <label for="Dob">Date of Birth:</label>
+    <input type="date" id="Dob" name="Dob" required>
+
+    <label for="Address">Address:</label>
+    <input type="text" id="Address" name="Address" required>
+
+    <label for="Department">Department:</label>
+    <select id="Department" name="Department" required>
+        <option value="">Select your department</option>
+        <option value="Computer Science">Computer Science</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Mechanical">Mechanical</option>
+        <option value="Civil">Civil</option>
+    </select>
+
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

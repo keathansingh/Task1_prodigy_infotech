@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIT-AP University</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #9a7369 0%, #513841 100%);
+            color: #fff;
+        }
+
+        header {
+            background-color: #ccb336d8;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            max-width: 1200px;
+        }
+
+        .logo img {
+            width: 150px;
+            height: auto;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .nav ul li {
+            margin-left: 30px;
+        }
+
+        .nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            padding: 5px 10px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .nav ul li a:hover {
+            background: #f02e2e;
+            border-radius: 5px;
+        }
+
+        .hero {
+            background-image: url("Areal-View-Campus.jpeg");
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-text {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        .about, .highlights {
+            padding: 60px 0;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.1rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 20px auto;
+            line-height: 1.8;
+        }
+
+        .banner-image {
+            text-align: center;
+        }
+
+        .banner-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .highlights {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .highlight {
+            flex: 1;
+            margin: 20px;
+            min-width: 250px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #ccb336d8;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero h2 {
+                font-size: 1.2rem;
+            }
+
+            .highlights {
+                flex-direction: column;
+            }
+
+            .highlight {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <img src="logo.jpeg" alt="VIT-AP University Logo">
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="student.html">Student</a></li>
+                <li><a href="Admissions.html">Admissions</a></li>
+                <li><a href="Lifeatvitap.html">Life At VITAP</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="About_us.html">About Us</a></li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="main">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Welcome to VIT-AP University</h1>
+            <p>Apply Knowledge. Improve Life!</p>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <div class="banner-image">
+                <img src="Central-Block-scaled.jpg" alt="Banner Image">
+            </div>
+            <h2>About Us</h2>
+            <p>VIT-AP University, Andhra Pradesh, is an amazing university located in Inavolu, Amaravati, the capital of Andhra Pradesh, India.</p>
+        </div>
+    </section>
+
+    <section class="highlights">
+        <div class="container">
+            <div class="highlight">
+                <h2>Academic Excellence</h2>
+                <p>Our university is dedicated to providing world-class education and conducting cutting-edge research in various fields. We strive to empower students with knowledge and skills to excel in their careers.</p>
+            </div>
+            <div class="highlight">
+                <h2>Research Innovation</h2>
+                <p>At VIT-AP, we encourage innovation and research. Our faculty and students are engaged in groundbreaking research that contributes to society and advances human knowledge.</p>
+            </div>
+            <div class="highlight">
+                <h2>Campus Life</h2>
+                <p>Experience vibrant campus life with a wide range of extracurricular activities, clubs, and events. We believe in holistic development, ensuring students grow both academically and personally.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2024 VIT-AP University</p>
+    </div>
+</footer>
+
+</body>
+</html>
